@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Product = ({ product }) => {
   // product data destructuring
   const { id, name, category, price, img, rating } = product;
   return (
-    <div className="bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
+    <div className="mt-3 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col group">
       {/* Image & Badge Container */}
       <div className="relative h-64 w-full overflow-hidden bg-gray-50">
         <img
@@ -46,9 +47,11 @@ const Product = ({ product }) => {
         </div>
 
         {/* Action Button */}
+       <Link to={`/shop/${id}`}>
         <button className="mt-4 w-full bg-gray-900 hover:bg-pink-600 text-white font-medium py-2.5 rounded-xl transition-colors duration-200 text-sm shadow-sm active:scale-98">
-          Add to Cart
+          View details
         </button>
+        </Link>
       </div>
     </div>
   );

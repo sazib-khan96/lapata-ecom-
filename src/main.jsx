@@ -6,6 +6,8 @@ import { createBrowserRouter,RouterProvider } from 'react-router'
 import Root from './Root/Root.jsx'
 import Home from './Pages/Home/Home.jsx'
 import Shop from './Pages/Shop/Shop.jsx'
+import Product from './Component/Product/Product.jsx'
+import SingleProduct from './Component/SingleProduct/SingleProduct.jsx'
 
 const Route = createBrowserRouter([
   {
@@ -18,8 +20,15 @@ const Route = createBrowserRouter([
       },
       {
         path: 'shop',
+        loader: () => fetch('/products.json'),
         Component:Shop
+      },
+      {
+        path:'/shop/:id',
+        loader: () => fetch('/products.json'),
+        Component:SingleProduct
       }
+      
     ]
   }
 ])

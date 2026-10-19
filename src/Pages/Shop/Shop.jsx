@@ -1,10 +1,19 @@
 import React from 'react';
+import { useLoaderData } from 'react-router';
+import Product from '../../Component/Product/Product';
 
 const Shop = () => {
+    const Products = useLoaderData()
+
     return (
-        <div>
-            <h1>This is shop page</h1>
-        </div>
+       
+          
+           <div className='px-3 md:grid grid-cols-4 gap-5 mt-8'>
+            {
+                Products.map(product => <Product product={product} key={product.id}></Product> )
+            }
+           </div>
+        
     );
 };
 

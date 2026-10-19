@@ -1,5 +1,6 @@
 import React from 'react';
 import Links from '../Links/Links';
+import { Link } from 'lucide-react';
 
 
 const navItems = [
@@ -13,44 +14,42 @@ const navItems = [
     title: "Shop",
     path: "/shop"
   },
+ 
   {
     id: "nav-03",
-    title: "Three-Piece",
-    path: "/category/three-piece"
-  },
-  {
-    id: "nav-04",
     title: "New Arrivals",
     path: "/new-arrivals"
   },
+  
   {
-    id: "nav-05",
-    title: "Best Sellers",
-    path: "/best-sellers"
-  },
-  {
-    id: "nav-06",
+    id: "nav-04",
     title: "Offers",
     path: "/offers"
   },
   {
-    id: "nav-07",
+    id: "nav-05",
     title: "About Us",
     path: "/about"
   },
   {
-    id: "nav-08",
+    id: "nav-06",
     title: "Contact",
     path: "/contact"
   }
 ];
-
+const menu  =    navItems.map(nav => <Links nav={nav} key={nav.id}></Links>)
 const Navigation = () => {
+
     return (
-        <div className='border flex gap-5 justify-center items-center p-3'>
-            {
-                navItems.map(nav => <Links nav={nav} key={nav.id}></Links> )
+        <div className='border flex gap-5 justify-between items-center p-3'>
+
+          <h1 className='text-2xl font-bold '>Lapata</h1>
+           <nav className='flex gap-5 justify-center items-center'>
+             {
+              menu
             }
+           </nav>
+           <button className='px-4 py-2 btn'>Help</button>
         </div>
     );
 };

@@ -128,5 +128,31 @@
     "rating": 4.4,
     "isFeatured": false,
     "description": "Trendy tie-dye pattern on soft cotton slub material, designed for a fresh casual look."
+  },
+  {
+    "id": "tp-011",
+    "name": "Tie & Dye Cotton Slub Three-Piece",
+    "category": "Three-Piece",
+    "price": 1650,
+    "stock": 22,
+    "sizes": ["M", "L", "XL"],
+    "colors": ["Blue-White", "Yellow-Orange"],
+    "img": "https://i.ibb.co.com/VWD3xPv9/9.jpg",
+    "rating": 4.4,
+    "isFeatured": false,
+    "description": "Trendy tie-dye pattern on soft cotton slub material, designed for a fresh casual look."
+  },
+  {
+    "id": "tp-012",
+    "name": "Tie & Dye Cotton Slub Three-Piece",
+    "category": "Three-Piece",
+    "price": 1650,
+    "stock": 22,
+    "sizes": ["M", "L", "XL"],
+    "colors": ["Blue-White", "Yellow-Orange"],
+    "img": "https://i.ibb.co.com/6qVRrVW/7.jpg",
+    "rating": 4.4,
+    "isFeatured": false,
+    "description": "Trendy tie-dye pattern on soft cotton slub material, designed for a fresh casual look."
   }
 ]
