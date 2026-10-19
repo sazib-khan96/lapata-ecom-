@@ -49,7 +49,7 @@ const Navigation = () => {
     return (
         <div className='border flex gap-5 justify-center items-center p-3'>
             {
-                navItems.map(nav => <Links nav={nav}></Links> )
+                navItems.map(nav => <Links nav={nav} key={nav.id}></Links> )
             }
         </div>
     );
