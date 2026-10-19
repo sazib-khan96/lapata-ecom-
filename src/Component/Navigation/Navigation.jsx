@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Links from '../Links/Links';
-import { Link } from 'lucide-react';
 
+import { X ,Menu} from 'lucide-react';
 
 const navItems = [
   {
@@ -39,13 +39,25 @@ const navItems = [
 ];
 const menu  =    navItems.map(nav => <Links nav={nav} key={nav.id}></Links>)
 const Navigation = () => {
+const [open,setOpen] = useState(false)
 
     return (
-        <div className='border flex gap-5 justify-between items-center p-3'>
-
+        <div className='flex gap-5 justify-between items-center p-3 z-50  bg-gray-200 shadow-2xl'>
+             <span onClick={()=> setOpen(!open) } className='flex gap-2 md:hidden'> 
+              {
+                open? <X className='text-red-400' /> : <Menu />
+             }
+             Menu
+             </span>
           <h1 className='text-2xl font-bold '>Lapata</h1>
-           <nav className='flex gap-5 justify-center items-center'>
+           <nav className='hidden md:flex gap-5 justify-center items-center'>
              {
+              menu
+            }
+           </nav>
+           {/* mobile  */}
+           <nav className={`absolute z-30 -top-60 left-0 ${open ? "top-16" : ""} bg-gray-200 w-full px-3 text-blue-400 py-5 `}>
+            {
               menu
             }
            </nav>
