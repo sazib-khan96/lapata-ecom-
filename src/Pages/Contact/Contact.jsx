@@ -4,6 +4,7 @@ import { Link } from "react-router";
 const Contact = () => {
   return (
     <form className="mx-auto p-8">
+      <title>lapata - LogIn</title>
       <fieldset className="fieldset rounded-box w-xs p-4 border mx-auto">
         <legend className="fieldset-legend">Login</legend>
 

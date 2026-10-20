@@ -4,6 +4,7 @@ const SignUp = () => {
   return (
     
      <form className="mx-auto p-8">
+      <title>Lapata - Sign Up</title>
       <fieldset className="fieldset rounded-box w-xs p-4 border mx-auto">
         <legend className="fieldset-legend">Sign Up </legend>
 

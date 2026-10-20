@@ -6,10 +6,14 @@ import Footer from '../Component/Footer/Footer';
 const Root = () => {
     //this file is main layout all project
     return (
-        <div className='max-w-7xl mx-auto'>
+        <div className=''>
             <Navigation></Navigation> 
-            <Outlet></Outlet>
-            <Footer></Footer>
+           <main className='max-w-7xl mx-auto'>
+             <Outlet></Outlet>
+           </main>
+           <div className='bg-black w-full'>
+             <Footer></Footer>
+           </div>
         </div>
     );
 };
