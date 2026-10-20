@@ -10,6 +10,8 @@ import Shop from './Pages/Shop/Shop.jsx'
 import Product from './Component/Product/Product.jsx'
 import SingleProduct from './Component/SingleProduct/SingleProduct.jsx'
 import WishList from './Pages/WishList/WishList.jsx'
+import Contact from './Pages/Contact/Contact.jsx';
+import SignUp from './Component/SignUp/SignUp.jsx';
 
 const Route = createBrowserRouter([
   {
@@ -33,6 +35,14 @@ const Route = createBrowserRouter([
       {
         path:'wishList',
         Component:WishList
+      },
+      {
+        path:"contact",
+        Component:Contact
+      },
+      {
+        path:'signUp',
+        Component:SignUp
       }
       
     ]
