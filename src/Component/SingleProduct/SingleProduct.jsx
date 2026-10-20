@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import imgs from '../../assets/payment.jpg'
 import { Star } from 'lucide-react';
+import { setProductData } from '../../Utility/utility';
 
 
 const SingleProduct = () => {
@@ -11,10 +12,12 @@ const SingleProduct = () => {
 const {name,img,price,rating,category,description,colors} = singledata
    
    const addToCardHandle = (id) =>{
-    alert('add to card',id)
+    console.log(id)
+    setProductData(id)
    }
     return (
         <div className='md:flex gap-8 mt-8  mx-auto px-10'>
+            <title>Lapata - Product details</title>
           <div className='bg-gray-100 p-8 rounded-2xl'>
              <img src={img} alt="" className='w-6/10 mx-auto rounded-2xl' />
           </div>

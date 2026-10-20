@@ -35,6 +35,11 @@ const navItems = [
     id: "nav-06",
     title: "Contact",
     path: "/contact"
+  },
+  {
+  id: 'nav-07',
+  title: 'Wish List',
+  path: '/wishList'
   }
 ];
 const menu  =    navItems.map(nav => <Links nav={nav} key={nav.id}></Links>)

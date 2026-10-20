@@ -10,6 +10,7 @@ const productsData = fetch("/products.json").then((res) => res.json());
 const Home = () => {
   return (
     <div>
+      <title>Lapata - Home</title>
       <HeroSection></HeroSection>
     {/* all data sent to main space use suspense  */}
       <Suspense fallback={<p>DATA IS LOADING.............</p>}>

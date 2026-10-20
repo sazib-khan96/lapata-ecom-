@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+ import { ToastContainer} from 'react-toastify';
 import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter,RouterProvider } from 'react-router'
@@ -8,6 +9,7 @@ import Home from './Pages/Home/Home.jsx'
 import Shop from './Pages/Shop/Shop.jsx'
 import Product from './Component/Product/Product.jsx'
 import SingleProduct from './Component/SingleProduct/SingleProduct.jsx'
+import WishList from './Pages/WishList/WishList.jsx'
 
 const Route = createBrowserRouter([
   {
@@ -27,6 +29,10 @@ const Route = createBrowserRouter([
         path:'/shop/:id',
         loader: () => fetch('/products.json'),
         Component:SingleProduct
+      },
+      {
+        path:'wishList',
+        Component:WishList
       }
       
     ]
@@ -36,5 +42,9 @@ const Route = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
    <RouterProvider router={Route}></RouterProvider>
+   <ToastContainer 
+   position='top-right'
+   autoClose={3000}
+    />
   </StrictMode>,
 )

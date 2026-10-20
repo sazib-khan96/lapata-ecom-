@@ -9,6 +9,7 @@ const Shop = () => {
        
           
            <div className='px-3 md:grid grid-cols-4 gap-5 mt-8'>
+            <title>Lapata - shop</title>
             {
                 Products.map(product => <Product product={product} key={product.id}></Product> )
             }
