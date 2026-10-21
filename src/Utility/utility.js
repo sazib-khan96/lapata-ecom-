@@ -19,10 +19,10 @@ const setProductData = (id) => {
        
        localStorage.setItem('wishlist', saveData)
       //  localStorage.setItem('wishlist',JSON.stringify(data))
-        toast.success('Allready Product added to wishlist!')
+        toast.success('Product added to wishlist!')
     }
     else{
-      toast.error('Product already exists!')
+      toast.error('Product is already in your wishlist!!')
     }
 
   
