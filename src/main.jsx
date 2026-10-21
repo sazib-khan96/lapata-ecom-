@@ -12,6 +12,7 @@ import SingleProduct from './Component/SingleProduct/SingleProduct.jsx'
 import WishList from './Pages/WishList/WishList.jsx'
 import Contact from './Pages/Contact/Contact.jsx';
 import SignUp from './Component/SignUp/SignUp.jsx';
+import Page404 from './Pages/Page404/Page404.jsx';
 
 const Route = createBrowserRouter([
   {
@@ -46,6 +47,11 @@ const Route = createBrowserRouter([
       }
       
     ]
+    
+  },
+  {
+    path:'/*',
+    Component:Page404
   }
 ])
 

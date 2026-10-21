@@ -31,7 +31,7 @@ const {name,img,price,rating,category,description,colors} = singledata
 
             <div className='flex gap-5 mt-10'>
                 <button onClick={() => addToCardHandle(id)} className='bg-black text-white px-4 py-2'>Add To Card</button>
-                <button>Buy Now</button>
+                <button className="border border-gray-700 px-4 text-black transition-colors duration-300 hover:bg-pink-700 hover:border-transparent hover:text-white">Buy Now</button>
             </div>
             <div className='mt-3'>
                 <img src={imgs} alt="" />

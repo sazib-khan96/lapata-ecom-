@@ -1,12 +1,17 @@
 import React from "react";
 import { Link } from "react-router";
+import logInImg from '../../assets/logIn.avif'
 
 const Contact = () => {
   return (
-    <form className="mx-auto p-8">
+   <div className="md:flex items-center justify-between gap-5">
+    <div>
+      <img src={logInImg} alt="" />
+    </div>
+     <form className="mx-auto p-8">
       <title>lapata - LogIn</title>
       <fieldset className="fieldset rounded-box w-xs p-4 border mx-auto">
-        <legend className="fieldset-legend">Login</legend>
+        <legend className="fieldset-legend text-2xl">Login</legend>
 
         <label className="label">Email</label>
         <input type="email" className="input" placeholder="Email" />
@@ -22,6 +27,8 @@ const Contact = () => {
       </fieldset>
       
     </form>
+   </div>
+   
   );
 };
 
