@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { getProductData } from "../../Utility/utility";
+import SelectWishList from "../../Component/SelectWishList/SelectWishList";
+
 
 const WishList = () => {
+  
   const [product, setproduct] = useState([]);
 
   useEffect(() => {
@@ -14,6 +17,7 @@ const WishList = () => {
 
   const wishList = getProductData();
   const WishListProduct = product.filter((item) => wishList.includes(item.id));
+  // console.log(WishListProduct)
 
   return (
     <div className="mt-8">
@@ -24,11 +28,13 @@ const WishList = () => {
         </TabList>
 
         
-        {WishListProduct.map((pro) => (
+        
           <TabPanel>
-            <h2>{pro.name}</h2>
+           {
+              WishListProduct.map(item =><SelectWishList item={item}></SelectWishList> )
+           }
           </TabPanel>
-        ))}
+       
 
         <TabPanel>
           <h2>Any content 2</h2>
