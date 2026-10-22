@@ -1,8 +1,14 @@
 import React from "react";
-import { Star } from "lucide-react";
+import { Star,X } from "lucide-react";
 import { NavLink } from 'react-router';
-const SelectWishList = ({ item }) => {
-  const { name, img, price, rating, category, description } = item;
+const SelectWishList = ({ item,removeItemHandle }) => {
+  const {id, name, img, price, rating, category, description } = item;
+
+  
+ const closeProducthandle = () =>{
+   removeItemHandle(id)
+ }
+
 
   return (
   
@@ -29,8 +35,8 @@ const SelectWishList = ({ item }) => {
   </div>
 
   {/* Product Card */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center bg-white border border-gray-100 rounded-3xl p-5 sm:p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
-
+  <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center bg-white border border-gray-100 rounded-3xl p-5 sm:p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+      <span onClick={() => closeProducthandle(id)} className="absolute top-3 right-3"><X></X></span>
     {/* Product Image */}
     <div className="bg-gray-50 rounded-2xl p-6 sm:p-10 flex items-center justify-center min-h-[300px]">
       <img

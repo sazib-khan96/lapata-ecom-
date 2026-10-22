@@ -13,17 +13,21 @@ const Contact = () => {
     
     const email = e.target.email.value 
     const pass = e.target.pass.value
-    
+    console.log(email,pass)
+  
+   e.target.reset()
   }
 
   const passwordOnChange = (e) =>{
      setPassword(e.target.value)
      if(password.length < 6){
         setErr('6 charecter or length')
+       
      }
      else{
       setErr('')
      }
+
   }
 
   return (

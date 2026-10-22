@@ -7,6 +7,12 @@ import SelectWishList from "../../Component/SelectWishList/SelectWishList";
 const WishList = () => {
   const [product, setproduct] = useState([]);
 
+  const removeItemHandle = (id) => {
+    const filterProduct = product.filter(cls => cls.id !== id)
+    setproduct(filterProduct)
+   localStorage.setItem('wishlist',JSON.stringify(filterProduct))
+  }
+
   useEffect(() => {
     fetch("/products.json")
       .then((res) => res.json())
@@ -27,7 +33,7 @@ const WishList = () => {
 
         <TabPanel>
           {WishListProduct.map((item) => (
-            <SelectWishList item={item}></SelectWishList>
+            <SelectWishList item={item} key={item.id} removeItemHandle={removeItemHandle}></SelectWishList>
           ))}
         </TabPanel>
 
