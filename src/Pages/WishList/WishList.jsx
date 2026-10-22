@@ -4,9 +4,7 @@ import "react-tabs/style/react-tabs.css";
 import { getProductData } from "../../Utility/utility";
 import SelectWishList from "../../Component/SelectWishList/SelectWishList";
 
-
 const WishList = () => {
-  
   const [product, setproduct] = useState([]);
 
   useEffect(() => {
@@ -27,14 +25,11 @@ const WishList = () => {
           <Tab>Title 2</Tab>
         </TabList>
 
-        
-        
-          <TabPanel>
-           {
-              WishListProduct.map(item =><SelectWishList item={item}></SelectWishList> )
-           }
-          </TabPanel>
-       
+        <TabPanel>
+          {WishListProduct.map((item) => (
+            <SelectWishList item={item}></SelectWishList>
+          ))}
+        </TabPanel>
 
         <TabPanel>
           <h2>Any content 2</h2>

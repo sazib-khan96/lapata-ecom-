@@ -12,7 +12,6 @@ const SingleProduct = () => {
 const {name,img,price,rating,category,description,colors} = singledata
    
    const addToCardHandle = (id) =>{
-    console.log(id)
     setProductData(id)
    }
     return (
